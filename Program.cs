@@ -9,7 +9,7 @@ namespace Chronicle.PostInstall
         {
             Console.WriteLine("Chronicle Post-Install");
             Console.WriteLine("Setting Client ID");
-            Registry.SetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\ChronicleSoftware", "clientID", Guid.NewGuid());
+            Registry.SetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\ChronicleSoftware", "clientID", Guid.NewGuid().ToString());
 
             Console.Write("Authentication Server: ");
             string authServer = Console.ReadLine() ?? "";
